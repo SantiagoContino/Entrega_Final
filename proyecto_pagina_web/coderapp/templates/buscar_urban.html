@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Urban</title>
+</head>
+<body>
+    {% for auto in modelos %}
+    <li>{{auto.marca}} - {{auto.modelo}} - {{auto.año}}</li>
+    {% endfor %}
+    
+</body>
+</html>

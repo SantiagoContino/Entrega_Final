@@ -1,0 +1,9 @@
+{% extends 'padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h1>Estos son los autos Deportivos</h1>
+{% for auto in autos %}
+<li>{{auto.marca}} - {{auto.modelo}} - {{auto.año}}</li>
+{% endfor %}
+<a class="navbar-brand" href="{% url 'deportivo_formulario' %}">Cargar nuevo auto</a>
+{% endblock  %}
