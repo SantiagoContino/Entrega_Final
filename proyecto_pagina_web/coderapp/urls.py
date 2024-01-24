@@ -1,5 +1,5 @@
 from django.urls import path
-from coderapp.views import index, urban, crossover, deportivo, urban_formulario, crossover_formulario, deportivo_formulario, buscar_urban
+from coderapp.views import index, urban, crossover, deportivo, urban_formulario, crossover_formulario, deportivo_formulario, buscar_urban, eliminar_urban
 
 
 urlpatterns = [
@@ -10,5 +10,6 @@ urlpatterns = [
     path("crossover_formulario/", crossover_formulario, name='crossover_formulario'),
     path("deportivo_formulario/", deportivo_formulario, name='deportivo_formulario'),
     path("buscar_urban/", buscar_urban, name='buscar_urban'),
+    path("eliminar_urban/<modelo_urban>", eliminar_urban, name='eliminar_urban'),
     path("", index, name='index'),
 ]

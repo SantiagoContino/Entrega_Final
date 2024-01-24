@@ -55,7 +55,7 @@ ROOT_URLCONF = 'proyecto_pagina_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': '/Users/tatoc/Desktop/Python/Programas Python/Tercera Preentrega/proyecto_pagina_web/coderapp/templates/',
+        'DIRS': 'Users/tatoc/OneDrive/Escritorio/Python/Programas Python/Entrega_Final/proyecto_pagina_web/coderapp/templates',
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -107,3 +107,13 @@ def buscar_urban(request):
 
         return render(request, "buscar_urban.html", contexto)
 
+def eliminar_urban(request, modelo_urban):
+     
+     urban = Urban.objects.get(modelo=modelo_urban)
+
+     urban.delete()
+
+     autos = Urban.objects.all()
+     contexto = {"autos":autos}
+
+     return render(request, 'urban.html', contexto)
