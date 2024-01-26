@@ -117,3 +117,27 @@ def eliminar_urban(request, modelo_urban):
      contexto = {"autos":autos}
 
      return render(request, 'urban.html', contexto)
+
+
+def eliminar_crossover(request, modelo_crossover):
+     
+     crossover = Crossover.objects.get(modelo=modelo_crossover)
+
+     crossover.delete()
+
+     autos = Crossover.objects.all()
+     contexto = {"autos":autos}
+
+     return render(request, 'crossover.html', contexto)
+
+
+def eliminar_deportivo(request, modelo_deportivo):
+     
+     deportivo = Deportivo.objects.get(modelo=modelo_deportivo)
+
+     deportivo.delete()
+
+     autos = Deportivo.objects.all()
+     contexto = {"autos":autos}
+
+     return render(request, 'deportivo.html', contexto)

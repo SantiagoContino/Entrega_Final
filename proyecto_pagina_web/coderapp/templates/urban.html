@@ -5,7 +5,7 @@
 {% for auto in autos %}
 <li>{{auto.marca}} - {{auto.modelo}} - {{auto.año}}</li>
 <button>
-    <a href="{% url 'eliminar_urban' p.modelo %}">Eliminar</a>
+    <a href="{% url 'eliminar_urban' auto.modelo %}">Eliminar</a>
 </button>
 {% endfor %}
 <br>

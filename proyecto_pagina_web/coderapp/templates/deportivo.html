@@ -4,6 +4,10 @@
 <h1>Estos son los autos Deportivos</h1>
 {% for auto in autos %}
 <li>{{auto.marca}} - {{auto.modelo}} - {{auto.año}}</li>
+<button>
+    <a href="{% url 'eliminar_deportivo' auto.modelo %}">Eliminar</a>
+</button>
 {% endfor %}
+<br>
 <a class="navbar-brand" href="{% url 'deportivo_formulario' %}">Cargar nuevo auto</a>
 {% endblock  %}
