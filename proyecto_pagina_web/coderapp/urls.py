@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.auth.views import LogoutView
-from coderapp.views import index, urban, crossover, deportivo, urban_formulario, crossover_formulario, deportivo_formulario, buscar_urban, eliminar_urban, eliminar_crossover, eliminar_deportivo, editar_urban, editar_crossover, editar_deportivo, login_request, registrar
+from coderapp.views import index, urban, crossover, deportivo, urban_formulario, crossover_formulario, deportivo_formulario, buscar_urban, eliminar_urban, eliminar_crossover, eliminar_deportivo, editar_urban, editar_crossover, editar_deportivo, login_request, registrar, sobre_mi
 
 
 urlpatterns = [
@@ -20,5 +20,6 @@ urlpatterns = [
     path("login", login_request, name='login'),
     path("registrar", registrar, name='registrar'),
     path("logout", LogoutView.as_view(template_name="logout.html"), name='logout'),
+    path("sobre_mi!", sobre_mi, name='sobre_mi'),
     path("", index, name='index'),
 ]

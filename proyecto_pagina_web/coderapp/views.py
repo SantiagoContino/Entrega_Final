@@ -6,22 +6,26 @@ from coderapp.forms import UrbanFormulario, CrossoverFormulario, DeportivoFormul
 
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 
 def index(request):
     return render(request, "index.html")
 
+@login_required
 def urban(request):
     autos = Urban.objects.all
 
     contexto= {"autos":autos}
     return render(request, 'urban.html', contexto)
 
+@login_required
 def crossover(request):
     autos = Crossover.objects.all
 
     contexto= {"autos":autos}
     return render(request, 'crossover.html', contexto)
 
+@login_required
 def deportivo(request):
     autos = Deportivo.objects.all
 
@@ -260,3 +264,7 @@ def registrar(request):
     formulario = UserCreationForm()
 
     return render(request, "registro.html", {"formulario": formulario})
+
+
+def sobre_mi(request):
+    return render(request, "sobre_mi.html")

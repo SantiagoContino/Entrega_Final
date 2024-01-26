@@ -24,6 +24,7 @@
                 <a class="navbar-brand" href="{% url 'urban' %}">Urban</a>
                 <a class="navbar-brand" href="{% url 'crossover' %}">Crossover</a>                
                 <a class="navbar-brand" href="{% url 'deportivo' %}">Deportivo</a>
+                <a class="navbar-brand" href="{% url 'sobre_mi' %}">Sobre Mi</a>
 
                 {% if request.user.is_authenticated %}
                 <form method="post" action="{% url 'logout' %}">
