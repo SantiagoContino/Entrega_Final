@@ -7,6 +7,9 @@
 <button>
     <a href="{% url 'eliminar_crossover' auto.modelo %}">Eliminar</a>
 </button>
+<button>
+    <a href="{% url 'editar_crossover' auto.modelo %}">Editar</a>
+</button>
 {% endfor %}
 <br>
 <a class="navbar-brand" href="{% url 'crossover_formulario' %}">Cargar nuevo auto</a>
